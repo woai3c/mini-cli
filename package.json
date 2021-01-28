@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/woai3c/cli-demo#readme",
   "dependencies": {
-    "commander": "^7.0.0"
+    "commander": "^7.0.0",
+    "inquirer": "^7.3.3"
   }
 }
