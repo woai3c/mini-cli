@@ -8,23 +8,24 @@ program
     .description('create a new project powered by vue-cli-service')
     .option('-t, --title', 'title to use before name')
     .option('-d, --debug', 'display some debugging')
-    .action((appName, options) => {
+    .action(async (appName, options) => {
         console.log(appName, JSON.stringify(options))
-        inquirer
-            .prompt([
-                /* Pass your questions in here */
-                'test'
-            ])
-            .then(answers => {
-                // Use user feedback for... whatever!!
-            })
-            .catch(error => {
-                if(error.isTtyError) {
-                // Prompt couldn't be rendered in the current environment
-                } else {
-                // Something else went wrong
-                }
-            })
+        const res = await inquirer.prompt([{
+            name: 'features',
+            type: 'checkbox',
+            message: '请选择要使用的功能',
+            choices: [
+                { 'name': 'eslint', value: 'eslint' },
+                { 'name': 'babel', value: 'babel' },
+                { 'name': 'TypeScript', value: 'ts' },
+                { 'name': 'vueRouter', value: 'router' },
+                { 'name': 'vuex', value: 'vuex' },
+                { 'name': 'cssPreprocessor', value: 'css' },
+                { 'name': 'unitTest', value: 'unit' },
+            ]
+        }])
+
+        console.log(JSON.stringify(res))
     })
 
 
