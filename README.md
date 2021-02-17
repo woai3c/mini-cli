@@ -1,2 +1,1 @@
-# cli-demo
-脚手架 demo
+模仿 Vue CLI 写的迷你版脚手架
