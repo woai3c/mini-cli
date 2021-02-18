@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "脚手架 demo",
   "main": "index.js",
+  "bin": {
+    "mv": "./bin/mv.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
