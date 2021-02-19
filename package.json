@@ -1,5 +1,5 @@
 {
-  "name": "cli-demo",
+  "name": "mini-cli",
   "version": "1.0.0",
   "description": "脚手架 demo",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/woai3c/cli-demo.git"
+    "url": "git+https://github.com/woai3c/mini-cli.git"
   },
   "husky": {
     "hooks": {
@@ -27,9 +27,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/woai3c/cli-demo/issues"
+    "url": "https://github.com/woai3c/mini-cli/issues"
   },
-  "homepage": "https://github.com/woai3c/cli-demo#readme",
+  "homepage": "https://github.com/woai3c/mini-cli#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
