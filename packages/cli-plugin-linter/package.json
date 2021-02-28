@@ -1,0 +1,26 @@
+{
+  "name": "cli-plugin-linter",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "woai3c <411020382@qq.com>",
+  "homepage": "https://github.com/woai3c/cli-demo#readme",
+  "license": "ISC",
+  "main": "lib/cli-plugin-linter.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woai3c/cli-demo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/woai3c/cli-demo/issues"
+  }
+}

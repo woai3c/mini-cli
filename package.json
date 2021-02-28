@@ -1,49 +1,14 @@
 {
-  "name": "mini-cli",
+  "name": "demo",
   "version": "0.1.0",
-  "description": "脚手架 demo",
   "main": "index.js",
-  "bin": {
-    "mvc": "./bin/mvc.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/woai3c/mini-cli.git"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node scripts/verify-commit.js"
-    }
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/woai3c/mini-cli/issues"
-  },
-  "homepage": "https://github.com/woai3c/mini-cli#readme",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^7.0.0",
-    "deepmerge": "^4.2.2",
-    "ejs": "^3.1.6",
-    "execa": "^5.0.0",
-    "fs-extra": "^9.1.0",
-    "globby": "^11.0.2",
-    "inquirer": "^7.3.3",
-    "isbinaryfile": "^4.0.6",
-    "javascript-stringify": "^2.0.1",
-    "lodash.clonedeep": "^4.5.0",
-    "node-fetch": "^2.6.1",
-    "read-pkg": "^2.0.0",
-    "readline": "^1.3.0",
-    "recast": "^0.20.4",
-    "vue-codemod": "0.0.5"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "license": "MIT",
   "devDependencies": {
+    "lerna": "^3.22.1",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
