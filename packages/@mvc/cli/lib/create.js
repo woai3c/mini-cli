@@ -83,7 +83,7 @@ async function create(name) {
     // 根据用户选择的选项加载相应的模块，在 package.json 写入对应的依赖项
     // 并且将对应的 template 模块渲染
     answers.features.forEach(feature => {
-        require(`cli-plugin-${feature}/generator`)(generator, answers)
+        require(`@mvc/cli-plugin-${feature}/generator`)(generator, answers)
     })
 
     await generator.generate()

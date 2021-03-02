@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "workspaces": [
-    "packages/*"
+    "packages/@mvc/*"
   ],
   "private": true,
   "license": "MIT",

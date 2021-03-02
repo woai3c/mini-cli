@@ -1,9 +1,9 @@
 {
-  "name": "cli",
+  "name": "@mvc/cli",
   "version": "0.1.0",
   "description": "mvc cli",
   "bin": {
-    "mvc": "./bin/mvc.js"
+    "mvc": "bin/mvc.js"
   },
   "keywords": [
     "cli"
@@ -46,11 +46,11 @@
     "readline": "^1.3.0",
     "recast": "^0.20.4",
     "vue-codemod": "0.0.5",
-    "cli-plugin-babel": "^0.1.0",
-    "cli-plugin-linter": "^0.1.0",
-    "cli-plugin-router": "^0.1.0",
-    "cli-plugin-vue": "^0.1.0",
-    "cli-plugin-vuex": "^0.1.0",
-    "cli-plugin-webpack": "^0.1.0"
+    "@mvc/cli-plugin-babel": "^0.1.0",
+    "@mvc/cli-plugin-linter": "^0.1.0",
+    "@mvc/cli-plugin-router": "^0.1.0",
+    "@mvc/cli-plugin-vue": "^0.1.0",
+    "@mvc/cli-plugin-vuex": "^0.1.0",
+    "@mvc/cli-plugin-webpack": "^0.1.0"
   }
 }
