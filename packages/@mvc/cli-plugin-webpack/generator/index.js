@@ -22,6 +22,6 @@ module.exports = (generator, options = {}) => {
 
     generator.render('./template', {
         hasBabel: options.features.includes('babel'),
-        lintOnSave: options.lintOn.includes('save'),
+        lintOnSave: options.lintOn && options.lintOn.includes('save'),
     })
 }
