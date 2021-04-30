@@ -14,18 +14,27 @@ class Creator {
         this.featurePrompt = featurePrompt
     }
 
-    getFinalPrompts() {
+    getFinalPrompts(name) {
         this.injectedPrompts.forEach(prompt => {
             const originalWhen = prompt.when || (() => true)
             prompt.when = (answers) => isManualMode(answers) && originalWhen(answers)
         })
-    
-        const prompts = [
-            this.presetPrompt,
-            this.featurePrompt,
-            ...this.injectedPrompts,
-            ...this.getOtherPrompts(),
-        ]
+        
+        let prompts
+        if (name) {
+            this.featurePrompt.choices.push(name)
+            prompts = [
+                this.featurePrompt,
+                ...this.injectedPrompts,
+            ]
+        } else {
+            prompts = [
+                this.presetPrompt,
+                this.featurePrompt,
+                ...this.injectedPrompts,
+                ...this.getOtherPrompts(),
+            ]
+        }
 
         return prompts
     }
