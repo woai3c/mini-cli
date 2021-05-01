@@ -58,11 +58,11 @@ const ensureEOL = str => {
 }
 
 class Generator {
-    constructor(pkg, context) {
+    constructor(pkg, context, files = {}) {
         this.pkg = pkg
         this.rootOptions = {}
         this.imports = {}
-        this.files = {}
+        this.files = files
         this.entryFile = `src/main.js`
         this.fileMiddlewares = []
         this.context = context
