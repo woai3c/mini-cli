@@ -7,8 +7,7 @@ const getPackage = require('./utils/getPackage')
 const readFiles = require('./utils/readFiles')
 
 async function add(name) {
-    const targetDir = path.join(process.cwd(), 'demo')
-    // const targetDir = process.cwd()
+    const targetDir = process.cwd()
     const pkg = getPackage(targetDir)
     // 清空控制台
     clearConsole()
