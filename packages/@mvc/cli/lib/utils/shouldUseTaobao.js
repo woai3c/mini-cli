@@ -22,17 +22,16 @@ module.exports = async function shouldUseTaobao(command) {
     if (!command) {
         command = hasYarn() ? 'yarn' : 'npm'
     }
-  
+
     // ensure this only gets called once.
     if (checked) return result
     checked = true
-  
     // previously saved preference
     const saved = loadOptions().useTaobaoRegistry
     if (typeof saved === 'boolean') {
         return (result = saved)
     }
-  
+
     const save = val => {
         result = val
         saveOptions({ useTaobaoRegistry: val })
@@ -50,13 +49,13 @@ module.exports = async function shouldUseTaobao(command) {
             return save(false)
         }
     }
-  
+
     const defaultRegistry = registries[command]
     if (removeSlash(userCurrent) !== removeSlash(defaultRegistry)) {
         // user has configured custom registry, respect that
         return save(false)
     }
-  
+
     let faster
     try {
         faster = await Promise.race([
@@ -66,7 +65,7 @@ module.exports = async function shouldUseTaobao(command) {
     } catch (e) {
         return save(false)
     }
-  
+
     if (faster !== registries.taobao) {
         // default is already faster
         return save(false)
@@ -75,7 +74,7 @@ module.exports = async function shouldUseTaobao(command) {
     if (process.env.VUE_CLI_API_MODE) {
         return save(true)
     }
-  
+
     // ask and save preference
     const { useTaobaoRegistry } = await inquirer.prompt([
         {
@@ -87,11 +86,6 @@ module.exports = async function shouldUseTaobao(command) {
             ),
         },
     ])
-    
-    // 注册淘宝源
-    if (useTaobaoRegistry) {
-        await execa(command, ['config', 'set', 'registry', registries.taobao])
-    }
 
     return save(useTaobaoRegistry)
 }

@@ -64,12 +64,14 @@ class PackageManager {
         // it only confuses users by skipping dev deps (when set to `production`).
         delete process.env.NODE_ENV
 
-        await this.setRegistry()
+        const registry = await this.setRegistry()
         await executeCommand(
             this.bin,
             [
                 ...PACKAGE_MANAGER_CONFIG[this.bin][command],
                 ...(args || []),
+                '--registry',
+                registry, // 设定临时注册源
             ],
             this.context,
         )
