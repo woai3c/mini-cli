@@ -12,4 +12,6 @@ module.exports = (generator) => {
             'babel-loader': '^8.2.2',
         },
     })
+
+    generator.render('./template', {})
 }

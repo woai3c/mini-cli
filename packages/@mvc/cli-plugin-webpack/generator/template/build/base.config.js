@@ -16,26 +16,11 @@ module.exports = {
     },
     module: {
         rules: [
-            <%_ if (lintOnSave) { _%>
-            {
-                enforce: 'pre',
-                test: /\.(js|vue)$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/
-            },
-            <%_ } _%>
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 exclude: /node_modules/,
             },
-            <%_ if (hasBabel) { _%>
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-            },
-            <%_ } _%>
             {
                 test: /\.(png|svg|jpg|gif|ico)$/,
                 use: [{
@@ -53,6 +38,21 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
+            <%_ if (lintOnSave) { _%>
+            {
+                enforce: 'pre',
+                test: /\.(js|vue)$/,
+                loader: 'eslint-loader',
+                exclude: /node_modules/
+            },
+            <%_ } _%>
+            <%_ if (hasBabel) { _%>
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            },
+            <%_ } _%>
         ],
     },
     plugins: [
