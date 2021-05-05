@@ -20,8 +20,8 @@ module.exports = (generator, options = {}) => {
         },
     })
 
-    generator.render('./template', {
-        hasBabel: options.features.includes('babel'),
-        lintOnSave: options.lintOn && options.lintOn.includes('save'),
-    })
+    // generator.render('./template', {
+    //     hasBabel: options.features.includes('babel'),
+    //     lintOnSave: options.lintOn && options.lintOn.includes('save'),
+    // })
 }
