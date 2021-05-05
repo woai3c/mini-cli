@@ -1,8 +1,8 @@
 module.exports = (generator, options = {}) => {
     generator.extendPackage({
         scripts: {
-            dev: 'webpack-dev-server --config ./build/dev.config.js',
-            build: 'webpack --config ./build/pro.config.js',
+            serve: 'mvc-cli-service serve',
+            build: 'mvc-cli-service build',
         },
         devDependencies: {
             'clean-webpack-plugin': '^3.0.0',
