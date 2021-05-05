@@ -77,13 +77,18 @@ async function create(name) {
     }
     
     const generator = new Generator(pkg, targetDir)
-    // 填入 vue webpack 必选项，无需用户选择
-    answers.features.unshift('vue', 'webpack')
+
+    // 填入 cli-service 必选项，无需用户选择
+    answers.features.unshift('service')
 
     // 根据用户选择的选项加载相应的模块，在 package.json 写入对应的依赖项
     // 并且将对应的 template 模块渲染
     answers.features.forEach(feature => {
-        require(`@mvc/cli-plugin-${feature}/generator`)(generator, answers)
+        if (feature !== 'service') {
+            require(`@mvc/cli-plugin-${feature}/generator`)(generator, answers)
+        } else {
+            require(`@mvc/cli-service/generator`)(generator, answers)
+        }
     })
 
     await generator.generate()
