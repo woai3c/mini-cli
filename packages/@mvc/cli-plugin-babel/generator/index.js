@@ -13,5 +13,5 @@ module.exports = (generator) => {
         },
     })
 
-    generator.render('./template', {})
+    // generator.render('./template', {})
 }
