@@ -1,5 +1,5 @@
 ---
-extend: '@mvc/cli-plugin-vue/generator/template/src/App.vue'
+extend: '@mvc/cli-service/generator/template/src/App.vue'
 replace:
   - !!js/regexp /<template>[^]*?<\/template>/
   - !!js/regexp /\n<script>[^]*?<\/script>\n/
