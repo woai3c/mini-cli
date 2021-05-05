@@ -1,0 +1,33 @@
+{
+  "name": "@mvc/cli-service",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "bin": {
+    "mvc": "bin/mvc-cli-service.js"
+  },
+  "author": "woai3c <411020382@qq.com>",
+  "homepage": "https://github.com/woai3c/cli-demo#readme",
+  "license": "ISC",
+  "main": "lib/cli-service.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woai3c/cli-demo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/woai3c/cli-demo/issues"
+  },
+  "dependencies": {
+    "webpack": "^5.36.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
