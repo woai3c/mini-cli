@@ -34,7 +34,7 @@
     "@mvc/cli-plugin-linter": "^0.1.0",
     "@mvc/cli-plugin-router": "^0.1.0",
     "@mvc/cli-plugin-vuex": "^0.1.0",
-    "@mvc/cli-plugin-webpack": "^0.1.0",
+    "@mvc/cli-service": "^0.1.0",
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
     "deepmerge": "^4.2.2",
