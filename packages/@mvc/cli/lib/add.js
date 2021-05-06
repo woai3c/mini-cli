@@ -1,4 +1,3 @@
-const path = require('path')
 const inquirer = require('inquirer')
 const Generator = require('./Generator')
 const clearConsole = require('./utils/clearConsole')
@@ -12,6 +11,11 @@ async function add(name) {
     // 清空控制台
     clearConsole()
 
+    pkg.devDependencies[`@mvc/cli-plugin-${name}`] = 'latest'
+
+    const pm = new PackageManager(targetDir)
+    await pm.install()
+
     let answers = {}
     try {
         const pluginPrompts = require(`@mvc/cli-plugin-${name}/prompts`)
@@ -21,7 +25,6 @@ async function add(name) {
     }
 
     const generator = new Generator(pkg, targetDir, await readFiles(targetDir))
-    const pm = new PackageManager(targetDir, answers.packageManager)
     require(`@mvc/cli-plugin-${name}/generator`)(generator, answers)
 
     await generator.generate()

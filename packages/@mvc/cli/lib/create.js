@@ -77,9 +77,18 @@ async function create(name) {
     }
     
     const generator = new Generator(pkg, targetDir)
-
     // 填入 cli-service 必选项，无需用户选择
     answers.features.unshift('service')
+    const version = 'latest'
+    answers.features.forEach(feature => {
+        if (feature !== 'service') {
+            pkg.devDependencies[`@mvc/cli-plugin-${feature}`] = version
+        } else {
+            pkg.devDependencies['@mvc/cli-service'] = version
+        }
+    })
+
+    await pm.install()
 
     // 根据用户选择的选项加载相应的模块，在 package.json 写入对应的依赖项
     // 并且将对应的 template 模块渲染
