@@ -13,6 +13,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/woai3c/cli-demo.git"
