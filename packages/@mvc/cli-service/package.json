@@ -1,6 +1,6 @@
 {
   "name": "@mvc/cli-service",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "> TODO: description",
   "bin": {
     "mvc": "bin/mvc-cli-service.js"
