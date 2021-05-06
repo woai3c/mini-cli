@@ -4,7 +4,7 @@
   "description": "> TODO: description",
   "author": "woai3c <411020382@qq.com>",
   "homepage": "https://github.com/woai3c/cli-demo#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/cli-plugin-linter.js",
   "directories": {
     "lib": "lib",

@@ -7,7 +7,7 @@
   },
   "author": "woai3c <411020382@qq.com>",
   "homepage": "https://github.com/woai3c/cli-demo#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/cli-service.js",
   "directories": {
     "lib": "lib",
