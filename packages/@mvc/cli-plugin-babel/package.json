@@ -17,10 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/woai3c/cli-demo.git"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
