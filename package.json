@@ -1,6 +1,6 @@
 {
-  "name": "demo",
-  "version": "0.1.0",
+  "name": "mvc",
+  "version": "1.0.4",
   "main": "index.js",
   "workspaces": [
     "packages/@mvc/*"

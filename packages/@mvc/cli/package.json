@@ -1,7 +1,7 @@
 {
   "name": "@mvc/cli",
   "version": "1.0.4",
-  "description": "mvc cli",
+  "description": "@mvc/cli",
   "bin": {
     "mvc": "bin/mvc.js"
   },
