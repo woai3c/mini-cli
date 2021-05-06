@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/mvc/*"
+    "packages/mvc-*"
   ],
   "version": "1.0.7",
   "npmClient": "yarn",

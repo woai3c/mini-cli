@@ -1,7 +1,7 @@
 {
-  "name": "mvc/cli-service",
+  "name": "mvc-cli-service",
   "version": "1.0.7",
-  "description": "mvc/cli-service",
+  "description": "mvc-cli-service",
   "bin": {
     "mvc": "bin/mvc-cli-service.js"
   },

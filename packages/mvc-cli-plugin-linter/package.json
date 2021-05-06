@@ -1,11 +1,11 @@
 {
-  "name": "mvc/cli-plugin-babel",
+  "name": "mvc-cli-plugin-linter",
   "version": "1.0.7",
-  "description": "mvc/cli-plugin-babel",
-  "keywords": [],
+  "description": "mvc-cli-plugin-linter",
   "author": "woai3c <411020382@qq.com>",
+  "homepage": "https://github.com/woai3c/cli-demo#readme",
   "license": "MIT",
-  "main": "lib/cli-plugin-babel.js",
+  "main": "lib/cli-plugin-linter.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -22,6 +22,5 @@
   },
   "bugs": {
     "url": "https://github.com/woai3c/cli-demo/issues"
-  },
-  "homepage": "https://github.com/woai3c/cli-demo#readme"
+  }
 }

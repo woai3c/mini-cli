@@ -11,21 +11,21 @@ async function add(name) {
     // 清空控制台
     clearConsole()
 
-    pkg.devDependencies[`mvc/cli-plugin-${name}`] = 'latest'
+    pkg.devDependencies[`mvc-cli-plugin-${name}`] = 'latest'
 
     const pm = new PackageManager(targetDir)
     await pm.install()
 
     let answers = {}
     try {
-        const pluginPrompts = require(`mvc/cli-plugin-${name}/prompts`)
+        const pluginPrompts = require(`mvc-cli-plugin-${name}/prompts`)
         answers = await inquirer.prompt(pluginPrompts)
     } catch (error) {
         console.log(error)
     }
 
     const generator = new Generator(pkg, targetDir, await readFiles(targetDir))
-    require(`mvc/cli-plugin-${name}/generator`)(generator, answers)
+    require(`mvc-cli-plugin-${name}/generator`)(generator, answers)
 
     await generator.generate()
     // 下载依赖
