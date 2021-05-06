@@ -1,6 +1,6 @@
 {
   "name": "@mvc/cli-plugin-linter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "woai3c <411020382@qq.com>",
   "homepage": "https://github.com/woai3c/cli-demo#readme",
@@ -13,6 +13,10 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/woai3c/cli-demo.git"

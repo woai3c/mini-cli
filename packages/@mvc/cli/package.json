@@ -1,6 +1,6 @@
 {
   "name": "@mvc/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mvc cli",
   "bin": {
     "mvc": "bin/mvc.js"
@@ -19,6 +19,10 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/woai3c/mini-cli.git"
@@ -30,11 +34,11 @@
     "url": "https://github.com/woai3c/mini-cli/issues"
   },
   "dependencies": {
-    "@mvc/cli-plugin-babel": "^1.0.0",
-    "@mvc/cli-plugin-linter": "^1.0.0",
-    "@mvc/cli-plugin-router": "^1.0.0",
-    "@mvc/cli-plugin-vuex": "^1.0.0",
-    "@mvc/cli-service": "^1.0.0",
+    "@mvc/cli-plugin-babel": "^1.0.1",
+    "@mvc/cli-plugin-linter": "^1.0.1",
+    "@mvc/cli-plugin-router": "^1.0.1",
+    "@mvc/cli-plugin-vuex": "^1.0.1",
+    "@mvc/cli-service": "^1.0.1",
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
     "deepmerge": "^4.2.2",
