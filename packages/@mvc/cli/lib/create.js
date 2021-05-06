@@ -82,9 +82,9 @@ async function create(name) {
     const version = 'latest'
     answers.features.forEach(feature => {
         if (feature !== 'service') {
-            pkg.devDependencies[`@mvc/cli-plugin-${feature}`] = version
+            pkg.devDependencies[`mvc/cli-plugin-${feature}`] = version
         } else {
-            pkg.devDependencies['@mvc/cli-service'] = version
+            pkg.devDependencies['mvc/cli-service'] = version
         }
     })
 
@@ -94,9 +94,9 @@ async function create(name) {
     // 并且将对应的 template 模块渲染
     answers.features.forEach(feature => {
         if (feature !== 'service') {
-            require(`@mvc/cli-plugin-${feature}/generator`)(generator, answers)
+            require(`mvc/cli-plugin-${feature}/generator`)(generator, answers)
         } else {
-            require(`@mvc/cli-service/generator`)(generator, answers)
+            require(`mvc/cli-service/generator`)(generator, answers)
         }
     })
 
