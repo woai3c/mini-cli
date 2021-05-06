@@ -103,7 +103,7 @@ class Generator {
         this.pkg.dependencies = sortObject(this.pkg.dependencies)
         this.pkg.devDependencies = sortObject(this.pkg.devDependencies)
         this.pkg.scripts = sortObject(this.pkg.scripts, [
-            'dev',
+            'serve',
             'build',
             'test:unit',
             'test:e2e',
