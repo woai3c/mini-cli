@@ -10,6 +10,7 @@ const { savePreset, rcPath } = require('./utils/options')
 const { log } = require('./utils/logger')
 const { saveOptions } = require('./utils/options')
 const PackageManager = require('./PackageManager')
+const writeFileTree = require('./utils/writeFileTree')
 
 async function create(name) {
     const targetDir = path.join(process.cwd(), name)
@@ -47,7 +48,7 @@ async function create(name) {
 
     // 弹出交互提示语并获取用户的选择
     const answers = await inquirer.prompt(creator.getFinalPrompts())
-
+    console.log(answers)
     if (answers.preset !== '__manual__') {
         const preset = creator.getPresets()[answers.preset]
         Object.keys(preset).forEach(key => {
@@ -79,13 +80,17 @@ async function create(name) {
     const generator = new Generator(pkg, targetDir)
     // 填入 cli-service 必选项，无需用户选择
     answers.features.unshift('service')
-    const version = 'latest'
+    const version = require('../package.json').version
     answers.features.forEach(feature => {
         if (feature !== 'service') {
-            pkg.devDependencies[`mvc-cli-plugin-${feature}`] = version
+            pkg.devDependencies[`mvc-cli-plugin-${feature}`] = `~${version}`
         } else {
-            pkg.devDependencies['mvc-cli-service'] = version
+            pkg.devDependencies['mvc-cli-service'] = `~${version}`
         }
+    })
+
+    await writeFileTree(targetDir, {
+        'package.json': JSON.stringify(pkg, null, 2),
     })
 
     await pm.install()
