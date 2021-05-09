@@ -3,7 +3,7 @@
   "version": "1.0.11",
   "description": "mvc-cli-service",
   "bin": {
-    "mvc": "bin/mvc-cli-service.js"
+    "mvc-cli-service": "bin/mvc-cli-service.js"
   },
   "author": "woai3c <411020382@qq.com>",
   "homepage": "https://github.com/woai3c/cli-demo#readme",
