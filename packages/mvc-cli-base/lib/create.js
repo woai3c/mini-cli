@@ -80,12 +80,11 @@ async function create(name) {
     const generator = new Generator(pkg, targetDir)
     // 填入 cli-service 必选项，无需用户选择
     answers.features.unshift('service')
-    const version = require('../package.json').version
     answers.features.forEach(feature => {
         if (feature !== 'service') {
-            pkg.devDependencies[`mvc-cli-plugin-${feature}`] = `~${version}`
+            pkg.devDependencies[`mvc-cli-plugin-${feature}`] = '~1.0.0'
         } else {
-            pkg.devDependencies['mvc-cli-service'] = `~${version}`
+            pkg.devDependencies['mvc-cli-service'] = '~1.0.0'
         }
     })
 
