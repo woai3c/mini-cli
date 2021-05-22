@@ -110,7 +110,7 @@ async function create(name) {
     await pm.install()
     log('\n依赖下载完成! 执行下列命令开始开发：\n')
     log(`cd ${name}`)
-    log(`${pm.bin === 'npm'? 'npm run' : 'yarn'} dev`)
+    log(`${pm.bin === 'npm'? 'npm run' : 'yarn'} serve`)
 }
 
 function getPromptModules() {
