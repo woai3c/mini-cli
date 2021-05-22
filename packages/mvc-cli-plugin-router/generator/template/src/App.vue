@@ -2,7 +2,7 @@
 extend: 'mvc-cli-service/generator/template/src/App.vue'
 replace:
   - !!js/regexp /<template>[^]*?<\/template>/
-  - !!js/regexp /\n<script>[^]*?<\/script>\n/
+  - !!js/regexp /\r\n<script>[^]*?<\/script>\r\n/
   - !!js/regexp /    margin-top[^]*?<\/style>/
 ---
 
