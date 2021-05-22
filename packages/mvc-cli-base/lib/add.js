@@ -11,7 +11,7 @@ async function add(name) {
     // 清空控制台
     clearConsole()
 
-    pkg.devDependencies[`mvc-cli-plugin-${name}`] = 'latest'
+    pkg.devDependencies[`mvc-cli-plugin-${name}`] = '~1.0.0'
 
     const pm = new PackageManager(targetDir)
     await pm.install()

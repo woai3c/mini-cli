@@ -48,7 +48,6 @@ async function create(name) {
 
     // 弹出交互提示语并获取用户的选择
     const answers = await inquirer.prompt(creator.getFinalPrompts())
-    console.log(answers)
     if (answers.preset !== '__manual__') {
         const preset = creator.getPresets()[answers.preset]
         Object.keys(preset).forEach(key => {
