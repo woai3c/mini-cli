@@ -283,17 +283,16 @@ class Generator {
 
         const replaceBlockRE = /<%# REPLACE %>([^]*?)<%# END_REPLACE %>/g
         if (parsed.extend) {
-            let extendPath
             if (parsed.extend.startsWith(':')) {
-                // 用户项目根目录
-                extendPath = path.join(process.cwd(), parsed.extend.slice(1))
+                // 用户项目根目录中的同名文件
+                finalTemplate = this.files[parsed.extend.slice(3)]
             } else {
-                extendPath = path.isAbsolute(parsed.extend)
+                const extendPath = path.isAbsolute(parsed.extend)
                     ? parsed.extend
                     : resolve.sync(parsed.extend, { basedir: path.dirname(name) })
+                finalTemplate = fs.readFileSync(extendPath, 'utf-8')
             }
 
-            finalTemplate = fs.readFileSync(extendPath, 'utf-8')
             if (parsed.replace) {
                 if (Array.isArray(parsed.replace)) {
                     const replaceMatch = content.match(replaceBlockRE)
