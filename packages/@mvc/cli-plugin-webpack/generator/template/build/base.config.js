@@ -38,21 +38,6 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
-            <%_ if (lintOnSave) { _%>
-            {
-                enforce: 'pre',
-                test: /\.(js|vue)$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/
-            },
-            <%_ } _%>
-            <%_ if (hasBabel) { _%>
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-            },
-            <%_ } _%>
         ],
     },
     plugins: [
